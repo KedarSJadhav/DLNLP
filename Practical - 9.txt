@@ -1,0 +1,41 @@
+--Amazon workdocs
+
+Step 1: Go to the particular link - https://aws.amazon.com/workdocs
+
+Step 2: Navigate to the Amazon WorkDocs home page for the supported region (not every 
+region supports this feature).
+
+Step 3: Click the Get Started Now button to proceed to the next page.
+
+Step 4: Here, you will see the Quick and Standard setup options as shown in the following 
+figure. For the learning purpose, the Quick Start setup guide should be enough. So proceed with 
+this.
+
+Step 5: On the next page, you need to specify the site URL, email and name details as shown in 
+the following figure.
+
+Step 6: Finally, click Complete Setup to complete the wizard. Your WordDocs site will be started 
+to initialize and should be available after some time. In fact, you will get an email once your 
+WorkDocs site is ready.
+
+Step 7: Now click the invite link you receive in your email box and set the desired password on 
+the next page.
+
+Step 8: If you didn’t get an invite mail yet, select your created WorkDocs site, click Actions, and 
+select Resend invite e-mail as shown in the following figure.
+
+Step 9: Now, click your WorkDocs site link, type your registered email ID and login to WorkDocs 
+console. You will see the WorkDocs console similar to as shown in the following figure.
+
+Step 10: In the right pane, you have various options to upload files and folders or create a new 
+folder structure as shown in the following figure
+
+Step 11: In the left navigation pane, there are various options to work with Amazon WorkDocs 
+as shown in the following figure. We recommend you try to explore each one of them for a few 
+minutes to understand and get familiarized with them.
+
+Step 12: Once your activity is done, please delete your WorkDocs site to avoid any unnecessary 
+charges. For this, select your WorkDocs site, click Actions, and select Delete WorkDocs sites. 
+
+
+
