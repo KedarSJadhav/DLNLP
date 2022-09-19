@@ -1,0 +1,153 @@
+###-----Node JS-----###
+
+=>>>>>Note: Go to Terminal
+
+sudo su
+
+curl -fsSl https://deb.nodesource.com/setup_17.x | bash -
+
+sudo apt install nodejs
+
+node --version
+
+npm --version
+
+
+--------------------------------------------------------------------------------------------
+
+###-----Python Code-----###
+
+=>>>>>Note: Go to Programming -> Thonny PythonIDE -> Click on the New
+
+a=int(input('enter the first number :-'))
+b=int(input('enter the second number :-' ))
+def addition(a,b):
+    add=a+b
+    return add
+print('result',addition(a,b))
+
+--------------------------------------------------------------------------------------------
+
+# A Basic Python Program
+
+# Declare some variables first
+name = ""
+age = 0
+currentYear = 0
+yearBorn = 0
+
+# ----------------------------------
+# Start by getting the users details
+name = input("Enter your name: ")
+age = int(input("Enter your max age this year: "))
+currentYear = int(input("What is the current year? : "))
+
+# ----------------------------------
+# Perform a basic calculation
+yearBorn = currentYear - age
+
+# ----------------------------------
+# Print the result
+print("You were born in the year " + str(yearBorn))
+
+--------------------------------------------------------------------------------------------
+
+###-----Pi Camera-----###
+
+from time import sleep
+from picamera import PiCamera
+
+camera = PiCamera()
+camera.resolution = (1280, 720) 
+camera.start_preview()
+
+sleep(5)
+camera.capture('/home/pi/newImage.jpg') 
+camera.stop_preview()
+
+--------------------------------------------------------------------------------------------
+
+###-----Computer Vision-----###
+
+
+Use URL from Endpoint and then add remaining /vision/v3.2/analyze?=
+
+->>1. Go to Postman
+
+Post method
+=>Headers
+Key: Ocp-Apim-subscription-key
+Value : 5b03226de67d48e38fa8fbcb9d8f337b (any key from azure portal keypoints)
+
+=>Body
+Make sure you select ->form-data
+
+Key: image1 =>select file (hover)=> text/file => select file
+Value : select and browse any image as you wish (Girl/Boy recommended)
+
+Now click on send and make sure you use POST method
+
+->>2. Go to Visual Studio -> Create a new Project -> Console Application Note: c#
+
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web;
+
+namespace CognitiveVisionApi
+{
+    internal class Program
+    {
+        private const string key = "2e83f388e8bf455e92690d8c67fe5c52"; /*1. Change with your key*/
+
+        static void Main(string[] args)
+        {
+            Task<string> result = DescribeImage(@"C:\Users\Admin_07\Desktop\ElectionSetu.png"); /*2. Change with your image path with extension(.png / .jpg / others)*/
+            Console.WriteLine(result.Result);
+            Console.ReadLine();
+        }
+        public static async Task<string> DescribeImage(string imageFilePath)
+        {
+            using (HttpClient myHttpClient = new HttpClient())
+            {
+
+                myHttpClient.DefaultRequestHeaders.Add("Ocp-Apim-subscription-key", key);
+
+                using (MultipartFormDataContent reqContent = new MultipartFormDataContent())
+
+                {
+                    var queryString = HttpUtility.ParseQueryString(string.Empty);
+
+                    queryString["maxCandidates"] = "1";
+
+                    var uri = "https://pavanyadav0723.cognitiveservices.azure.com/vision/v3.2/describe? " + queryString; /*3. Change with your link*/
+                    try
+                    {
+                        var imgContent = new ByteArrayContent(System.IO.File.ReadAllBytes(imageFilePath));
+
+                        reqContent.Add(imgContent);
+                        HttpResponseMessage respMessage = await myHttpClient.PostAsync(uri, reqContent);
+                        string finalJson = await respMessage.Content.
+
+                        ReadAsStringAsync();
+                        return finalJson;
+                    }
+                    catch (System.IO.FileNotFoundException ex)
+                    {
+                        return "The specified image file path is invalid.";
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        return "The HTTP request object does not seem to be correctly formed.";
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------
+
+

@@ -1,0 +1,47 @@
+-> Windows 10 IoT is a member of the Windows 10 family that brings enterprise-class power, security and manageability to the Internet of Things.
+
+-> Hardware Guide:
+For getting started with windows 10 IOT, you will require the following hardware
+1.	Raspberry Pi 3
+2.	16 GB Micro SD Card – class 10
+3.	Display
+4.	Keyboard
+5.	Mouse
+6.	Windows 10 PC
+7.	Card Reader
+
+1.	Download the Windows 10 IoT Core Dashboard from https://developer.microsoft.com/en-us/windows/iot/Downloads
+
+2.	Once downloaded, open the Dashboard and click on set up a new device and insert a SD card into your computer
+
+3.	Fill out all of the fields as indicated.
+
+4.	Accept the software license terms and click Download and install. You'll see that Windows 10 IoT Core is now flashing onto your device.
+
+5.	Connecting to a network (Wired connection) - If your device comes with an Ethernet port or USB Ethernet adapter support to enable a wired connection, attach an Ethernet cable to connect it to your network.
+
+6.	Or alternatively connect via Wireless wifi card or dongle
+
+7.	Connecting wireless Display - If you haven't connected and display and would like to connect via Wi-Fi, you'll need to:
+	a.	Go to the IoT Dashboard and click on My Devices.
+	b.	Find your unconfigured board from the list. Its name will begin with "AJ_"... (e.g., AJ_58EA6C68). If you don't see your board appear after a few minutes, try rebooting your board.
+	c.	Click on Configure Device and enter your network credentials. This will connect your board to the network.
+8.	Go to raspberry pi official website and download raspberry pi imager and download it.
+
+9.	Install imager and select raspberry pi OS in operating system. 
+
+10.	Next select your SD card/USB. 
+
+11.	Click on WRITE this will write pi OS on SD card
+
+12.	Insert SD card and press boot key if no OS is installed then pi will boot automatically click on next. 
+
+13.	Select time zone and keyboard and click next
+
+14.	Enter username pi and password pi and click on next
+
+15.	Click on skip.
+
+16.	Click on restart.  
+
+17.	Pi will boot and start if installation starts again than remove boot SD card and restart pi. 
